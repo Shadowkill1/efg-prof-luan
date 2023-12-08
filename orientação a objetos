@@ -1,0 +1,40 @@
+from datetime import date
+
+
+class Pessoa:
+    def __init__(self, nome, nascimento, cpf, rg, endereco, estado_civil):
+        self.nome = nome
+        self.nascimento = nascimento
+        self.cpf = cpf
+        self.rg = rg
+        self.endereco = endereco
+        self.estado_civil = estado_civil
+
+    def calcularIdade(self):
+        hoje = date.today()
+        idade = hoje.year - self.nascimento.year
+        if hoje.month < self.nascimento.month or (hoje.month == self.nascimento.month and hoje.day < self.nascimento.day):
+            idade -= 1
+        return idade
+
+
+    def retornarDados(self):
+        return {
+            "Nome": self.nome,
+            "Data de Nascimento": self.nascimento.strftime('%d/%m/%Y'),
+            "CPF": self.cpf,
+            "RG": self.rg,
+            "Endereço": self.endereco,
+            "Estado Civil": self.estado_civil
+        }
+
+pessoa = Pessoa("pedro", date(1992, 11, 4), "123.456.789-00", "9876543", "Rua w, 321 - goiania - goias", "casado")
+
+idade = pessoa.calcularIdade()
+dados_pessoa = pessoa.retornarDados()
+
+print(f"Idade: {idade}")
+for chave, valor in dados_pessoa.items():
+    print(f"{chave}: {valor}")
+
+
