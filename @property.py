@@ -2,12 +2,12 @@ import datetime
 
 class Pessoa:
     def __init__(self, nome, nascimento, cpf, rg, endereco, estado_civil):
-        self._nome = nome
-        self._nascimento = nascimento
-        self._cpf = cpf
-        self._rg = rg
-        self._endereco = endereco
-        self._estado_civil = estado_civil
+        self.__nome = nome
+        self.__nascimento = nascimento
+        self.__cpf = cpf
+        self.__rg = rg
+        self.__endereco = endereco
+        self.__estado_civil = estado_civil
 
     @property
     def nome(self):
@@ -69,8 +69,8 @@ class Pessoa:
         return f"Nome: {self._nome}\nNascimento: {self._nascimento}\nCPF: {self.cpf}\nRG: {self.rg}\nEndereço: {self._endereco}\nEstado Civil: {self._estado_civil}"
 
 pessoa = Pessoa("Pedro Henrique", "07/11/1991", "12345678901", "987654321", "Rua 206,2", "Casado")
-print(pessoa. calcular_idade())
-print(pessoa.retornar_dados_formatados())
+print(pessoa.calcular_idade)
+print(pessoa.retornar_dados_formatados)
 
 print(pessoa.nome)
 pessoa.nome ='josé'
