@@ -11,7 +11,7 @@ class Pessoa:
 
     @property
     def nome(self):
-        return self._nome
+        return self.__nome
 
     @nome.setter
     def nome(self, nome):
@@ -19,7 +19,7 @@ class Pessoa:
 
     @property
     def nascimento(self):
-        return self._nascimento
+        return self.__nascimento
 
     @nascimento.setter
     def nascimento(self, nascimento):
@@ -27,7 +27,7 @@ class Pessoa:
 
     @property
     def cpf(self):
-        return "********" + self._cpf[-4:]
+        return "********" + self.__cpf[-4:]
 
     @cpf.setter
     def cpf(self, cpf):
@@ -35,7 +35,7 @@ class Pessoa:
 
     @property
     def rg(self):
-        return "********" + self._rg[-4:]
+        return "********" + self.__rg[-4:]
 
     @rg.setter
     def rg(self, rg):
@@ -43,7 +43,7 @@ class Pessoa:
 
     @property
     def endereco(self):
-        return self._endereco
+        return self.__endereco
 
     @endereco.setter
     def endereco(self, endereco):
@@ -51,7 +51,7 @@ class Pessoa:
 
     @property
     def estado_civil(self):
-        return self._estado_civil
+        return self.__estado_civil
 
     @estado_civil.setter
     def estado_civil(self, estado_civil):
