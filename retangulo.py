@@ -14,8 +14,8 @@ class Retangulo:
     def perimetro(self):
         return(self.__base * 2) + (self.__altura * 2)
     
-base = float(input('qual a base'))
-altura = float(input('qual a altura'))
+base = float(input('qual a base: '))
+altura = float(input('qual a altura: '))
 
 r = Retangulo(base, altura)
 print(r.base)
