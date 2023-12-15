@@ -2,16 +2,16 @@ import datetime
 
 class Pessoa:
     def __init__(self, nome, nascimento, cpf, rg, endereco, estado_civil):
-        self._nome = nome
-        self._nascimento = nascimento
-        self._cpf = cpf
-        self._rg = rg
-        self._endereco = endereco
-        self._estado_civil = estado_civil
+        self.__nome = nome
+        self.__nascimento = nascimento
+        self.__cpf = cpf
+        self.__rg = rg
+        self.__endereco = endereco
+        self.__estado_civil = estado_civil
 
     @property
     def nome(self):
-        return self._nome
+        return self.__nome
 
     @nome.setter
     def nome(self, nome):
@@ -19,7 +19,7 @@ class Pessoa:
 
     @property
     def nascimento(self):
-        return self._nascimento
+        return self.__nascimento
 
     @nascimento.setter
     def nascimento(self, nascimento):
@@ -27,7 +27,7 @@ class Pessoa:
 
     @property
     def cpf(self):
-        return "********" + self._cpf[-4:]
+        return "********" + self.__cpf[-4:]
 
     @cpf.setter
     def cpf(self, cpf):
@@ -35,7 +35,7 @@ class Pessoa:
 
     @property
     def rg(self):
-        return "********" + self._rg[-4:]
+        return "********" + self.__rg[-4:]
 
     @rg.setter
     def rg(self, rg):
@@ -43,7 +43,7 @@ class Pessoa:
 
     @property
     def endereco(self):
-        return self._endereco
+        return self.__endereco
 
     @endereco.setter
     def endereco(self, endereco):
@@ -51,7 +51,7 @@ class Pessoa:
 
     @property
     def estado_civil(self):
-        return self._estado_civil
+        return self.__estado_civil
 
     @estado_civil.setter
     def estado_civil(self, estado_civil):
@@ -69,8 +69,8 @@ class Pessoa:
         return f"Nome: {self._nome}\nNascimento: {self._nascimento}\nCPF: {self.cpf}\nRG: {self.rg}\nEndereço: {self._endereco}\nEstado Civil: {self._estado_civil}"
 
 pessoa = Pessoa("Pedro Henrique", "07/11/1991", "12345678901", "987654321", "Rua 206,2", "Casado")
-print(pessoa. calcular_idade())
-print(pessoa.retornar_dados_formatados())
+print(pessoa.calcular_idade)
+print(pessoa.retornar_dados_formatados)
 
 print(pessoa.nome)
 pessoa.nome ='josé'
